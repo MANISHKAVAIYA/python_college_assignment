@@ -83,3 +83,23 @@ delete_student(2)
 
 print("\nList of students after deletion:")
 read_students()
+
+
+# Output
+# Student Alice added successfully!
+# Student Bob added successfully!
+
+# List of students:
+# ID: 1, Name: Alice, Age: 20
+# ID: 2, Name: Bob, Age: 22
+
+# Student ID 1 updated successfully!
+
+# List of students after update:
+# ID: 1, Name: Alicia, Age: 21
+# ID: 2, Name: Bob, Age: 22
+
+# Student ID 2 deleted successfully!
+
+# List of students after deletion:
+# ID: 1, Name: Alicia, Age: 21
