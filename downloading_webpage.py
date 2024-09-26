@@ -1,19 +1,15 @@
-# Import necessary modules
-from urllib.request import urlopen
-import os
+import urllib.request
 
-# Define the URL and file paths
-url = "http://cheer.lib-dyndns.com/.?cheerid"
-file_name = "C:\\xampp\\htdocs\\here\\heresay\\here.php"
+url = 'https://stackoverflow.com'
 
-# Fetch the webpage data
-data = urlopen(url).read()
+# Mimicking a browser request
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'}
+req = urllib.request.Request(url, headers=headers)
 
-# Check if the file already exists
-if os.path.exists(file_name):
-    print("File exists")
-else:
+response = urllib.request.urlopen(req)
+webContent = response.read()
 
-    with open(file_name, "wb") as f:
-        f.write(data)
-    print("File created and data written")
+with open('webpage.html', 'wb') as file:
+    file.write(webContent)
+
+print("Webpage saved as 'webpage.html'.")
